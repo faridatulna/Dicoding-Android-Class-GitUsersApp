@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <string name="app_name">GitHub User</string>
     <!-- Other string resources-->
     <string name="username">username
@@ -23,4 +23,10 @@
     <string name="switch_preference">switchBtn</string>
     <string name="title_activity_favorite">Favorite Users</string>
     <string name="alarm_time">09:00</string>
+    <string name="notif_success">Masuk SetNotification!</string>
+    <string name="set_alarm_success">Sukses! Reminder terpasang!</string>
+    <string name="set_alarm_cancel">Reminder dibatalkan!</string>
+    <string name="alarm_message">Jangan lupa kunjungi Github App untuk kepoin pengguna Github!</string>
+    <string name="del_user_success">Sukses menghapus user favorite</string>
+    <string name="add_user_success">Sukses menambah user favorite</string>
 </resources>

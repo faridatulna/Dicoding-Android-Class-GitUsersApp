@@ -11,7 +11,7 @@ androidExtensions {
 android {
     compileSdkVersion 30
     defaultConfig {
-        applicationId "gitusersapp.app.com.gitusersapp"
+        applicationId defaultApplicationId
         minSdkVersion 21
         targetSdkVersion 30
         versionCode 1
