@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="add_user_success">Favorite this user</string>
+    <string name="alarm_message">Tap to find out our git user at Github Users App!</string>
+    <string name="alarm_time">09:00</string>
+    <string name="app_name">GitHub User</string>
+    <string name="company">company
+    </string>
+    <string name="daily_reminder">Daily Reminder at 9.00 AM</string>
+    <string name="del_user_success">Unfavorite this user</string>
+    <string name="follower">Follower</string>
+    <string name="following">Following</string>
+    <string name="location">location
+    </string>
+    <string name="menu_setting">Setting</string>
+    <string name="menu_users">Users</string>
+    <string name="name">name
+    </string>
+    <string name="notif_success">Masuk SetNotification!</string>
+    <string name="repository">10000
+    </string>
+    <string name="set_alarm_cancel">Daily Reminder is Off!</string>
+    <string name="set_alarm_success">Daily Reminder Set Up!</string>
+    <string name="sign_no_connect">There is no connnection</string>
+    <string name="sign_no_data">There is no data existed</string>
+    <string name="switch_preference">switchBtn</string>
+    <string name="title_activity_favorite">Favorite Users</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="username">username
+    </string>
+</resources>

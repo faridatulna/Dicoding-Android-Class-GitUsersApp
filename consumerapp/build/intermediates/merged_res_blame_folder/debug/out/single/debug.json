@@ -1,0 +1,186 @@
+[
+    {
+        "merged": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\build\\intermediates\\res\\merged\\debug\\drawable_ic_search_white.xml.flat",
+        "source": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\src\\main\\res\\drawable\\ic_search_white.xml"
+    },
+    {
+        "merged": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\build\\intermediates\\res\\merged\\debug\\layout_fragment_following.xml.flat",
+        "source": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\src\\main\\res\\layout\\fragment_following.xml"
+    },
+    {
+        "merged": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\build\\intermediates\\res\\merged\\debug\\layout_settings_activity.xml.flat",
+        "source": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\src\\main\\res\\layout\\settings_activity.xml"
+    },
+    {
+        "merged": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\build\\intermediates\\res\\merged\\debug\\drawable_ic_person_white.xml.flat",
+        "source": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\src\\main\\res\\drawable\\ic_person_white.xml"
+    },
+    {
+        "merged": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\build\\intermediates\\res\\merged\\debug\\menu_action_bar_menu.xml.flat",
+        "source": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\src\\main\\res\\menu\\action_bar_menu.xml"
+    },
+    {
+        "merged": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\build\\intermediates\\res\\merged\\debug\\layout_activity_splash.xml.flat",
+        "source": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\src\\main\\res\\layout\\activity_splash.xml"
+    },
+    {
+        "merged": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\build\\intermediates\\res\\merged\\debug\\layout_item_row_user.xml.flat",
+        "source": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\src\\main\\res\\layout\\item_row_user.xml"
+    },
+    {
+        "merged": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_foreground.png.flat",
+        "source": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\src\\main\\res\\mipmap-hdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\build\\intermediates\\res\\merged\\debug\\xml_preferences.xml.flat",
+        "source": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\src\\main\\res\\xml\\preferences.xml"
+    },
+    {
+        "merged": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\build\\intermediates\\res\\merged\\debug\\menu_action_bar_menu2.xml.flat",
+        "source": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\src\\main\\res\\menu\\action_bar_menu2.xml"
+    },
+    {
+        "merged": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\build\\intermediates\\res\\merged\\debug\\drawable_ic_nodata.xml.flat",
+        "source": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\src\\main\\res\\drawable\\ic_nodata.xml"
+    },
+    {
+        "merged": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\build\\intermediates\\res\\merged\\debug\\drawable_ic_noconnect.xml.flat",
+        "source": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\src\\main\\res\\drawable\\ic_noconnect.xml"
+    },
+    {
+        "merged": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\build\\intermediates\\res\\merged\\debug\\drawable_ic_notif_black.xml.flat",
+        "source": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\src\\main\\res\\drawable\\ic_notif_black.xml"
+    },
+    {
+        "merged": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\build\\intermediates\\res\\merged\\debug\\layout_activity_detail.xml.flat",
+        "source": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\src\\main\\res\\layout\\activity_detail.xml"
+    },
+    {
+        "merged": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\build\\intermediates\\res\\merged\\debug\\font_roboto_slab.ttf.flat",
+        "source": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\src\\main\\res\\font\\roboto_slab.ttf"
+    },
+    {
+        "merged": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\build\\intermediates\\res\\merged\\debug\\drawable_grad.xml.flat",
+        "source": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\src\\main\\res\\drawable\\grad.xml"
+    },
+    {
+        "merged": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\build\\intermediates\\res\\merged\\debug\\drawable_ic_fav_border.xml.flat",
+        "source": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\src\\main\\res\\drawable\\ic_fav_border.xml"
+    },
+    {
+        "merged": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\build\\intermediates\\res\\merged\\debug\\drawable_ic_launcher_background.xml.flat",
+        "source": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\src\\main\\res\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\build\\intermediates\\res\\merged\\debug\\layout_fragment_follower.xml.flat",
+        "source": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\src\\main\\res\\layout\\fragment_follower.xml"
+    },
+    {
+        "merged": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\build\\intermediates\\res\\merged\\debug\\drawable_splash_bg.xml.flat",
+        "source": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\src\\main\\res\\drawable\\splash_bg.xml"
+    },
+    {
+        "merged": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\build\\intermediates\\res\\merged\\debug\\drawable_ic_list_white.xml.flat",
+        "source": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\src\\main\\res\\drawable\\ic_list_white.xml"
+    },
+    {
+        "merged": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\build\\intermediates\\res\\merged\\debug\\xml_backup_descriptor.xml.flat",
+        "source": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\src\\main\\res\\xml\\backup_descriptor.xml"
+    },
+    {
+        "merged": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_foreground.png.flat",
+        "source": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\src\\main\\res\\mipmap-mdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
+        "source": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\build\\intermediates\\res\\merged\\debug\\drawable_ic_setting_white.xml.flat",
+        "source": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\src\\main\\res\\drawable\\ic_setting_white.xml"
+    },
+    {
+        "merged": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\build\\intermediates\\res\\merged\\debug\\drawable_ic_fav_fill.xml.flat",
+        "source": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\src\\main\\res\\drawable\\ic_fav_fill.xml"
+    },
+    {
+        "merged": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\build\\intermediates\\res\\merged\\debug\\drawable_div.png.flat",
+        "source": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\src\\main\\res\\drawable\\div.png"
+    },
+    {
+        "merged": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\build\\intermediates\\res\\merged\\debug\\layout_activity_favorite.xml.flat",
+        "source": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\src\\main\\res\\layout\\activity_favorite.xml"
+    },
+    {
+        "merged": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\build\\intermediates\\res\\merged\\debug\\drawable_github_logo.png.flat",
+        "source": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\src\\main\\res\\drawable\\github_logo.png"
+    },
+    {
+        "merged": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\build\\intermediates\\res\\merged\\debug\\drawable_circle_border.xml.flat",
+        "source": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\src\\main\\res\\drawable\\circle_border.xml"
+    }
+]

@@ -1,0 +1,34 @@
+[
+    {
+        "merged": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_follower.xml",
+        "source": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\src\\main\\res\\layout\\fragment_follower.xml"
+    },
+    {
+        "merged": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_detail.xml",
+        "source": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\src\\main\\res\\layout\\activity_detail.xml"
+    },
+    {
+        "merged": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_following.xml",
+        "source": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\src\\main\\res\\layout\\fragment_following.xml"
+    },
+    {
+        "merged": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_row_user.xml",
+        "source": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\src\\main\\res\\layout\\item_row_user.xml"
+    },
+    {
+        "merged": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_splash.xml",
+        "source": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\src\\main\\res\\layout\\activity_splash.xml"
+    },
+    {
+        "merged": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\settings_activity.xml",
+        "source": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\src\\main\\res\\layout\\settings_activity.xml"
+    },
+    {
+        "merged": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
+        "source": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_favorite.xml",
+        "source": "E:\\MyProjects\\Dicoding Academy\\GitUsersApp\\consumerapp\\src\\main\\res\\layout\\activity_favorite.xml"
+    }
+]
