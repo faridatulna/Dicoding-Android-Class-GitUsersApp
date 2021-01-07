@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <issue id="IconLocation">
+        <ignore path="src/main/res/drawable/div.png" />
+        <ignore path="src/main/res/drawable/github_big_logo.png" />
+        <ignore path="src/main/res/drawable/github_logo.png" />
+    </issue>
+</lint>
