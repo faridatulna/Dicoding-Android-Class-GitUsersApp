@@ -9,10 +9,6 @@ import android.util.Log
 import androidx.constraintlayout.widget.Constraints
 import com.faridaaidah.gitusersapp.database.UserContract.UserColumns.Companion.TABLE_USER
 import com.faridaaidah.gitusersapp.database.UserContract.UserColumns.Companion.ID
-import com.faridaaidah.gitusersapp.database.UserContract.UserColumns.Companion.USERNAME
-import com.faridaaidah.gitusersapp.database.UserContract.UserColumns.Companion.AVATAR_URL
-import com.faridaaidah.gitusersapp.database.UserContract.UserColumns.Companion.URL
-import com.faridaaidah.gitusersapp.model.UserModel
 
 class UserHelper(context: Context) {
     private var dataBaseHelper: DatabaseHelper = DatabaseHelper(context)

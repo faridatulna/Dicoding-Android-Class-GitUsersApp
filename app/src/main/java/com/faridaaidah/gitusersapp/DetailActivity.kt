@@ -53,8 +53,8 @@ class DetailActivity : AppCompatActivity() {
         //tab and view pager
         val pagerAdapter = PagerAdapter(this, supportFragmentManager)
         pagerAdapter.username = dataUser?.login
-        binding.vpFollow.adapter = pagerAdapter
-        binding.tabsFolls.setupWithViewPager(binding.vpFollow)
+        binding.vpFolls.adapter = pagerAdapter
+        binding.tabsFolls.setupWithViewPager(binding.vpFolls)
 
         userHelper = UserHelper.getDatabase(applicationContext)
         userHelper.open()

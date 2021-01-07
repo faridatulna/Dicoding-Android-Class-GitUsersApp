@@ -28,10 +28,10 @@ class FavoriteActivity : AppCompatActivity() {
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        binding.rvUsers.layoutManager = LinearLayoutManager(this)
-        binding.rvUsers.setHasFixedSize(true)
+        binding.rvUser.layoutManager = LinearLayoutManager(this)
+        binding.rvUser.setHasFixedSize(true)
         favoriteAdapter = FavoriteAdapter()
-        binding.rvUsers.adapter = favoriteAdapter
+        binding.rvUser.adapter = favoriteAdapter
 
         if (savedInstanceState == null) {
             loadData()
@@ -51,14 +51,9 @@ class FavoriteActivity : AppCompatActivity() {
             if (users.isNotEmpty()) {
                 favoriteAdapter.listFavorite = users
             } else {
-                favoriteAdapter.listFavorite = ArrayList()
                 binding.signNoData.visibility = View.VISIBLE
             }
         }
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

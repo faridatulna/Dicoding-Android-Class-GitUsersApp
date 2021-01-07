@@ -51,10 +51,42 @@ class DetailActivity : AppCompatActivity() {
         //tab and view pager
         val pagerAdapter = PagerAdapter(this, supportFragmentManager)
         pagerAdapter.username = dataUser?.login
-        binding.vpFollow.adapter = pagerAdapter
-        binding.tabsFolls.setupWithViewPager(binding.vpFollow)
+        binding.vpFolls.adapter = pagerAdapter
+        binding.tabsFolls.setupWithViewPager(binding.vpFolls)
 
+        //click button to adds favorite user
+        binding.btnFav.setOnClickListener {
+            if (dataUser != null) {
+                favoriteUser(dataUser,"favorite")
+            }
+            binding.btnFav.visibility = INVISIBLE
+            binding.btnUnfav.visibility = VISIBLE
+        }
+
+        binding.btnUnfav.setOnClickListener {
+            if (dataUser != null) {
+                favoriteUser(dataUser,"unfavorite")
+            }
+            binding.btnFav.visibility = VISIBLE
+            binding.btnUnfav.visibility = INVISIBLE
+        }
         supportActionBar?.elevation = 0f
+    }
+
+    private fun favoriteUser(user: UserModel, status:String){
+        val args = ContentValues()
+        args.put(UserContract.UserColumns.ID, user.id)
+        args.put(UserContract.UserColumns.USERNAME, user.login)
+        args.put(UserContract.UserColumns.AVATAR_URL, user.avatar)
+        args.put(UserContract.UserColumns.URL, user.url)
+
+        if(status == "unfavorite"){
+            contentResolver.delete(Uri.parse(CONTENT_URI.toString() + "/" + user.id), null, null)
+            Toast.makeText(this@DetailActivity, getString(R.string.del_user_success), Toast.LENGTH_SHORT).show()
+        }else{
+            contentResolver.insert(CONTENT_URI, args)
+            Toast.makeText(this@DetailActivity, getString(R.string.add_user_success), Toast.LENGTH_SHORT).show()
+        }
     }
 
     private fun getAPIData(dataUser: UserModel){

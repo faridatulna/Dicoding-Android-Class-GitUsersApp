@@ -19,7 +19,9 @@
                 android:name=".provider.GitAppProvider"
                 android:authorities="com.faridaaidah.gitusersapp"
                 android:enabled="true"
-                android:exported="true"></provider>
+                android:exported="true"
+                android:readPermission="com.faridaaidah.gitusersapp.READ_DATABASE"
+                android:writePermission="com.faridaaidah.gitusersapp.WRITE_DATABASE"/>
 
         <activity
                 android:name=".SplashActivity"

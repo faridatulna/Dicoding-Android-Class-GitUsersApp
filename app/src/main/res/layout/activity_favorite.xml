@@ -9,7 +9,7 @@
     tools:context=".FavoriteActivity">
 
     <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_users"
+            android:id="@+id/rvUser"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_alignParentStart="true"
@@ -19,7 +19,7 @@
             tools:listitem="@layout/item_row_user" />
 
     <ProgressBar
-            android:id="@+id/progress_bar"
+            android:id="@+id/progressBar"
             style="@android:style/Widget.DeviceDefault.Light.ProgressBar.Inverse"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -29,7 +29,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
-            android:id="@+id/sign_no_data"
+            android:id="@+id/signNoData"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center"

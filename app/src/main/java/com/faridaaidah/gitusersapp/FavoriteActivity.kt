@@ -1,7 +1,10 @@
 package com.faridaaidah.gitusersapp
 
 import android.content.Intent
+import android.database.ContentObserver
 import android.os.Bundle
+import android.os.Handler
+import android.os.HandlerThread
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
@@ -30,17 +33,24 @@ class FavoriteActivity : AppCompatActivity() {
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        binding.rvUsers.layoutManager = LinearLayoutManager(this)
-        binding.rvUsers.setHasFixedSize(true)
-        favoriteAdapter = FavoriteAdapter()
-        binding.rvUsers.adapter = favoriteAdapter
-
-        userHelper = UserHelper.getDatabase(applicationContext)
-        userHelper.open()
+        val handlerThread = HandlerThread("DataObserver")
+        handlerThread.start()
+        val handler = Handler(handlerThread.looper)
+        val myObserver = object : ContentObserver(handler) {
+            override fun onChange(self: Boolean) {
+                loadData()
+            }
+        }
+        contentResolver.registerContentObserver(CONTENT_URI, true, myObserver)
 
         if (savedInstanceState == null) {
             loadData()
         }
+
+        binding.rvUser.layoutManager = LinearLayoutManager(this)
+        binding.rvUser.setHasFixedSize(true)
+        favoriteAdapter = FavoriteAdapter()
+        binding.rvUser.adapter = favoriteAdapter
     }
 
     private fun loadData(){
@@ -56,7 +66,6 @@ class FavoriteActivity : AppCompatActivity() {
             if (users.isNotEmpty()) {
                 favoriteAdapter.listFavorite = users
             } else {
-                favoriteAdapter.listFavorite = ArrayList()
                 binding.signNoData.visibility = View.VISIBLE
             }
         }

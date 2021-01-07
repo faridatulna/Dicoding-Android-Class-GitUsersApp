@@ -2,8 +2,6 @@
 <resources>
     <color name="colorPrimary">#000000</color>
     <color name="colorPrimaryDark">#B4000000</color>
-    <color name="colorAccent">#AD000000</color>
     <color name="circleBorder">#50FFFFFF</color>
-    <color name="colorBgSplash">#ADFFFFFF</color>
 
 </resources>
