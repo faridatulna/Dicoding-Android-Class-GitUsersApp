@@ -1,18 +1,13 @@
 package com.faridaaidah.consumerapp
 
-import android.content.ContentValues
 import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.view.View.*
-import android.widget.Toast
+import android.view.View.VISIBLE
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import com.faridaaidah.consumerapp.adapter.PagerAdapter
-import com.faridaaidah.consumerapp.database.UserContract
-import com.faridaaidah.consumerapp.database.UserContract.UserColumns.Companion.CONTENT_URI
 import com.faridaaidah.consumerapp.databinding.ActivityDetailBinding
 import com.faridaaidah.consumerapp.model.DetailUserModel
 import com.faridaaidah.consumerapp.model.UserModel
@@ -35,8 +30,8 @@ class DetailActivity : AppCompatActivity() {
         loadData()
     }
 
-    private fun loadData(){
-        val dataUser= intent.getParcelableExtra<UserModel>("userlist")
+    private fun loadData() {
+        val dataUser = intent.getParcelableExtra<UserModel>("userlist")
         if (dataUser != null) {
             getAPIData(dataUser)
         }
@@ -54,51 +49,23 @@ class DetailActivity : AppCompatActivity() {
         binding.vpFolls.adapter = pagerAdapter
         binding.tabsFolls.setupWithViewPager(binding.vpFolls)
 
-        //click button to adds favorite user
-        binding.btnFav.setOnClickListener {
-            if (dataUser != null) {
-                favoriteUser(dataUser,"favorite")
-            }
-            binding.btnFav.visibility = INVISIBLE
-            binding.btnUnfav.visibility = VISIBLE
-        }
-
-        binding.btnUnfav.setOnClickListener {
-            if (dataUser != null) {
-                favoriteUser(dataUser,"unfavorite")
-            }
-            binding.btnFav.visibility = VISIBLE
-            binding.btnUnfav.visibility = INVISIBLE
-        }
         supportActionBar?.elevation = 0f
     }
 
-    private fun favoriteUser(user: UserModel, status:String){
-        val args = ContentValues()
-        args.put(UserContract.UserColumns.ID, user.id)
-        args.put(UserContract.UserColumns.USERNAME, user.login)
-        args.put(UserContract.UserColumns.AVATAR_URL, user.avatar)
-        args.put(UserContract.UserColumns.URL, user.url)
-
-        if(status == "unfavorite"){
-            contentResolver.delete(Uri.parse(CONTENT_URI.toString() + "/" + user.id), null, null)
-            Toast.makeText(this@DetailActivity, getString(R.string.del_user_success), Toast.LENGTH_SHORT).show()
-        }else{
-            contentResolver.insert(CONTENT_URI, args)
-            Toast.makeText(this@DetailActivity, getString(R.string.add_user_success), Toast.LENGTH_SHORT).show()
-        }
-    }
-
-    private fun getAPIData(dataUser: UserModel){
+    private fun getAPIData(dataUser: UserModel) {
         //get data from API
         dataUser.login?.let {
             APIConfig().getService()
                 .getDetailUser(it)
                 .enqueue(object : Callback<DetailUserModel> {
-                    override fun onFailure(call: Call<DetailUserModel>, t: Throwable){
-                        binding.signNoConnect.visibility = VISIBLE
+                    override fun onFailure(call: Call<DetailUserModel>, t: Throwable) {
+                        binding.signNoconnect.visibility = VISIBLE
                     }
-                    override fun onResponse(call: Call<DetailUserModel>, @NotNull response: Response<DetailUserModel>) {
+
+                    override fun onResponse(
+                        call: Call<DetailUserModel>,
+                        @NotNull response: Response<DetailUserModel>
+                    ) {
                         dataDetailUser = response.body()
                         binding.tvUsername.text = dataDetailUser?.login
                         binding.tvLocation.text = dataDetailUser?.location
@@ -120,7 +87,6 @@ class DetailActivity : AppCompatActivity() {
         when (item.itemId) {
             R.id.nav_user -> {
                 startActivity(Intent(this, MainActivity::class.java))
-                finish()
                 return true
             }
             R.id.nav_set -> {

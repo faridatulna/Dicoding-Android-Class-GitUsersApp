@@ -1,13 +1,13 @@
 package com.faridaaidah.gitusersapp.model
 
 import android.os.Parcelable
-import javax.annotation.Generated
 import com.google.gson.annotations.SerializedName
 import kotlinx.android.parcel.Parcelize
+import javax.annotation.Generated
 
 @Generated("com.robohorse.robopojogenerator")
 @Parcelize
-class DetailUserModel (
+class DetailUserModel(
     @field:SerializedName("id") //id
     val id: String? = null,
     @field:SerializedName("login") //login
@@ -20,4 +20,4 @@ class DetailUserModel (
     val company: String? = null,
     @field:SerializedName("location") //location
     val location: String? = null
-): Parcelable
+) : Parcelable

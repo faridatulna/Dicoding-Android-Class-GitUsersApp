@@ -47,7 +47,7 @@
                 android:orientation="vertical">
 
             <TextView
-                    android:id="@+id/tvName"
+                    android:id="@+id/tv_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -61,7 +61,7 @@
                     android:textStyle="bold" />
 
             <TextView
-                    android:id="@+id/tvUsername"
+                    android:id="@+id/tv_username"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -82,7 +82,7 @@
                     android:showDividers="middle">
 
                 <TextView
-                        android:id="@+id/tvRepo"
+                        android:id="@+id/tv_repo"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:fontFamily="@font/roboto_slab"
@@ -94,7 +94,7 @@
                         android:textSize="12sp" />
 
                 <TextView
-                        android:id="@+id/tvLocation"
+                        android:id="@+id/tv_location"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:fontFamily="@font/roboto_slab"
@@ -106,7 +106,7 @@
                         android:textSize="12sp" />
 
                 <TextView
-                        android:id="@+id/tvCompany"
+                        android:id="@+id/tv_company"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:fontFamily="@font/roboto_slab"
@@ -123,14 +123,14 @@
     </RelativeLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/btnUnfav"
+            android:id="@+id/btn_fav"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
             android:foregroundGravity="left|bottom"
             android:soundEffectsEnabled="true"
-            android:visibility="visible"
+            android:visibility="invisible"
             app:fabSize="normal"
             app:layout_anchorGravity="bottom|end"
             app:srcCompat="@drawable/ic_fav_border"
@@ -138,7 +138,7 @@
             tools:ignore="ContentDescription" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/btnFav"
+            android:id="@+id/btn_unfav"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
@@ -158,10 +158,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/rellay1"
-            android:visibility="visible"/>
+            android:visibility="visible" />
 
     <androidx.viewpager.widget.ViewPager
-            android:id="@+id/vpFolls"
+            android:id="@+id/vp_folls"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@id/tabs_folls"
@@ -169,7 +169,7 @@
             app:layout_constraintStart_toStartOf="parent" />
 
     <LinearLayout
-            android:id="@+id/signNoConnect"
+            android:id="@+id/sign_noconnect"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center"

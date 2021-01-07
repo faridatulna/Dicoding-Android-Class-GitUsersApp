@@ -13,15 +13,16 @@ import retrofit2.http.Path
 import retrofit2.http.Query
 
 class APIConfig {
-    private fun getInterceptor() : OkHttpClient{
+    private fun getInterceptor(): OkHttpClient {
         val logging = HttpLoggingInterceptor()
         logging.level = HttpLoggingInterceptor.Level.BODY
         return OkHttpClient.Builder()
             .addInterceptor(logging)
             .build()
     }
+
     //set APIClient ambil data api dari base url
-    private fun getRetrofit() : Retrofit{
+    private fun getRetrofit(): Retrofit {
         return Retrofit.Builder()
             .baseUrl("https://api.github.com/")
             .client(getInterceptor())

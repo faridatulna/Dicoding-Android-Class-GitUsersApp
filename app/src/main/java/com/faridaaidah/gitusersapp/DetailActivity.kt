@@ -37,8 +37,8 @@ class DetailActivity : AppCompatActivity() {
         loadData()
     }
 
-    private fun loadData(){
-        val dataUser= intent.getParcelableExtra<UserModel>("userlist")
+    private fun loadData() {
+        val dataUser = intent.getParcelableExtra<UserModel>("userlist")
         if (dataUser != null) {
             getAPIData(dataUser)
         }
@@ -58,14 +58,14 @@ class DetailActivity : AppCompatActivity() {
 
         userHelper = UserHelper.getDatabase(applicationContext)
         userHelper.open()
-        if (userHelper.checkUser(dataUser?.id.toString())){
+        if (userHelper.checkUser(dataUser?.id.toString())) {
             binding.btnFav.visibility = GONE
             binding.btnUnfav.visibility = VISIBLE
         }
         //click button to adds favorite user
         binding.btnFav.setOnClickListener {
             if (dataUser != null) {
-                favoriteUser(dataUser,"favorite")
+                favoriteUser(dataUser, "favorite")
             }
             binding.btnFav.visibility = INVISIBLE
             binding.btnUnfav.visibility = VISIBLE
@@ -73,7 +73,7 @@ class DetailActivity : AppCompatActivity() {
 
         binding.btnUnfav.setOnClickListener {
             if (dataUser != null) {
-                favoriteUser(dataUser,"unfavorite")
+                favoriteUser(dataUser, "unfavorite")
             }
             binding.btnFav.visibility = VISIBLE
             binding.btnUnfav.visibility = INVISIBLE
@@ -82,16 +82,20 @@ class DetailActivity : AppCompatActivity() {
         supportActionBar?.elevation = 0f
     }
 
-    private fun getAPIData(dataUser: UserModel){
+    private fun getAPIData(dataUser: UserModel) {
         //get data from API
         dataUser.login?.let {
             APIConfig().getService()
                 .getDetailUser(it)
                 .enqueue(object : Callback<DetailUserModel> {
-                    override fun onFailure(call: Call<DetailUserModel>, t: Throwable){
-                        binding.signNoConnect.visibility = VISIBLE
+                    override fun onFailure(call: Call<DetailUserModel>, t: Throwable) {
+                        binding.signNoconnect.visibility = VISIBLE
                     }
-                    override fun onResponse(call: Call<DetailUserModel>, @NotNull response: Response<DetailUserModel>) {
+
+                    override fun onResponse(
+                        call: Call<DetailUserModel>,
+                        @NotNull response: Response<DetailUserModel>
+                    ) {
                         dataDetailUser = response.body()
                         binding.tvUsername.text = dataDetailUser?.login
                         binding.tvLocation.text = dataDetailUser?.location
@@ -103,19 +107,27 @@ class DetailActivity : AppCompatActivity() {
         }
     }
 
-    private fun favoriteUser(user: UserModel, status:String){
+    private fun favoriteUser(user: UserModel, status: String) {
         val args = ContentValues()
         args.put(UserContract.UserColumns.ID, user.id)
         args.put(UserContract.UserColumns.USERNAME, user.login)
         args.put(UserContract.UserColumns.AVATAR_URL, user.avatar)
         args.put(UserContract.UserColumns.URL, user.url)
 
-        if(status == "unfavorite"){
+        if (status == "unfavorite") {
             contentResolver.delete(Uri.parse(CONTENT_URI.toString() + "/" + user.id), null, null)
-            Toast.makeText(this@DetailActivity, getString(R.string.del_user_success), Toast.LENGTH_SHORT).show()
-        }else{
+            Toast.makeText(
+                this@DetailActivity,
+                getString(R.string.del_user_success),
+                Toast.LENGTH_SHORT
+            ).show()
+        } else {
             contentResolver.insert(CONTENT_URI, args)
-            Toast.makeText(this@DetailActivity, getString(R.string.add_user_success), Toast.LENGTH_SHORT).show()
+            Toast.makeText(
+                this@DetailActivity,
+                getString(R.string.add_user_success),
+                Toast.LENGTH_SHORT
+            ).show()
         }
     }
 

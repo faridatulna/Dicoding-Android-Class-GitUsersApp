@@ -38,7 +38,7 @@ class FavoriteActivity : AppCompatActivity() {
         }
     }
 
-    private fun loadData(){
+    private fun loadData() {
         GlobalScope.launch(Dispatchers.Main) {
             binding.progressBar.visibility = View.VISIBLE
             val deferredUsers = async(Dispatchers.IO) {
@@ -66,7 +66,6 @@ class FavoriteActivity : AppCompatActivity() {
         when (item.itemId) {
             R.id.nav_user -> {
                 startActivity(Intent(this, MainActivity::class.java))
-                finish()
                 return true
             }
             R.id.nav_set -> {

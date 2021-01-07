@@ -4,9 +4,9 @@
 
     <solid android:color="@color/colorPrimaryDark" />
 
-<!--    <gradient-->
-<!--            android:angle="45"-->
-<!--            android:endColor="@color/gradEnd"-->
-<!--            android:startColor="@color/gradStart" />-->
+    <!--    <gradient-->
+    <!--            android:angle="45"-->
+    <!--            android:endColor="@color/gradEnd"-->
+    <!--            android:startColor="@color/gradStart" />-->
 
 </shape>

@@ -3,8 +3,8 @@
         package="com.faridaaidah.consumerapp">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="com.faridaaidah.gitusersapp.READ_DATABASE"/>
-    <uses-permission android:name="com.faridaaidah.gitusersapp.WRITE_DATABASE"/>
+    <uses-permission android:name="com.faridaaidah.gitusersapp.READ_DATABASE" />
+    <uses-permission android:name="com.faridaaidah.gitusersapp.WRITE_DATABASE" />
 
     <application
             android:allowBackup="true"
@@ -15,8 +15,7 @@
             android:theme="@style/Theme.GitUsersApp">
         <activity
                 android:name=".SplashActivity"
-                android:theme="@style/SplashTheme">
-        </activity>
+                android:theme="@style/SplashTheme"></activity>
         <activity
                 android:name=".MainActivity"
                 android:logo="@drawable/github_logo"
@@ -34,6 +33,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <meta-data
                 android:name="preloaded_fonts"
                 android:resource="@array/preloaded_fonts" />

@@ -21,7 +21,7 @@ class FollowingFragment : Fragment() {
     private var followingList: List<UserModel> = arrayListOf()
     private lateinit var binding: FragmentFollowingBinding
 
-    companion object{
+    companion object {
         private const val ARG_USERNAME = "username"
 
         fun newinstance(username: String?): FollowerFragment {

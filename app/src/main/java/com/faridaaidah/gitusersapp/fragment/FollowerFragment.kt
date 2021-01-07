@@ -20,7 +20,7 @@ class FollowerFragment : Fragment() {
     private var followerList: List<UserModel> = arrayListOf()
     private lateinit var binding: FragmentFollowerBinding
 
-    companion object{
+    companion object {
         private const val ARG_USERNAME = "username"
 
         fun newinstance(username: String?): FollowingFragment {
@@ -46,19 +46,19 @@ class FollowerFragment : Fragment() {
         binding = FragmentFollowerBinding.inflate(layoutInflater)
 
         binding.progressBar.visibility = View.VISIBLE
-        rv_follower.layoutManager = LinearLayoutManager(activity)
 
         if (username != null) {
             APIConfig().getService()
                 .getFollowers(username)
                 .enqueue(object : Callback<List<UserModel>> {
-                    override fun onFailure(call: Call<List<UserModel>>, t: Throwable){
+                    override fun onFailure(call: Call<List<UserModel>>, t: Throwable) {
                         binding.progressBar.visibility = View.GONE
                     }
 
-                    override fun onResponse(call: Call<List<UserModel>>,
-                                            response: Response<List<UserModel>>
-                    ){
+                    override fun onResponse(
+                        call: Call<List<UserModel>>,
+                        response: Response<List<UserModel>>
+                    ) {
                         binding.progressBar.visibility = View.GONE
                         followerList = response.body()!!
                         rv_follower.adapter = UserAdapter(followerList)
@@ -66,5 +66,7 @@ class FollowerFragment : Fragment() {
                     }
                 })
         }
+
+        rv_follower.layoutManager = LinearLayoutManager(context)
     }
 }

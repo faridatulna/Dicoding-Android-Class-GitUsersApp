@@ -7,7 +7,7 @@
                 android:defaultValue="false"
                 android:icon="@drawable/ic_notif_black"
                 android:key="@string/switch_preference"
-                android:summary="Klik untuk On atau Off"
+                android:summary="@string/btn_message"
                 android:title="@string/daily_reminder" />
     </PreferenceCategory>
 </PreferenceScreen>

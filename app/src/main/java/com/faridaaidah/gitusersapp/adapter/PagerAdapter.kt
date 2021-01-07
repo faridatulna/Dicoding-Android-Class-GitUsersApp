@@ -13,7 +13,7 @@ import com.faridaaidah.gitusersapp.fragment.FollowingFragment
 //const val BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT = 1
 
 class PagerAdapter(private val mContext: Context, fm: FragmentManager) :
-    FragmentPagerAdapter(fm, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT){
+    FragmentPagerAdapter(fm, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {
 
     var username: String? = null
 

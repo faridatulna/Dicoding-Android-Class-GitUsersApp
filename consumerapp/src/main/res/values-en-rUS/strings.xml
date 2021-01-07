@@ -25,7 +25,6 @@
     <string name="set_alarm_success">Daily Reminder Set Up!</string>
     <string name="set_alarm_cancel">Daily Reminder is Off!</string>
     <string name="alarm_message">Tap to find out our git user at Github Users App!</string>
-    <string name="del_user_success">Unfavorite this user</string>
-    <string name="add_user_success">Favorite this user</string>
     <string name="reminder">Reminder</string>
+    <string name="btn_message">Click to On/Off</string>
 </resources>

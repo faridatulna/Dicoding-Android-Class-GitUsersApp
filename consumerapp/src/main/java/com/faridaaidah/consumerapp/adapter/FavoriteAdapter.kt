@@ -26,7 +26,8 @@ class FavoriteAdapter : RecyclerView.Adapter<FavoriteAdapter.CardViewViewHolder>
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CardViewViewHolder {
         //connecting to item layout
-        val view: View = LayoutInflater.from(parent.context).inflate(R.layout.item_row_user, parent, false)
+        val view: View =
+            LayoutInflater.from(parent.context).inflate(R.layout.item_row_user, parent, false)
         return CardViewViewHolder(view)
     }
 
@@ -39,7 +40,7 @@ class FavoriteAdapter : RecyclerView.Adapter<FavoriteAdapter.CardViewViewHolder>
 
     inner class CardViewViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val binding = ItemRowUserBinding.bind(itemView)
-        fun bind(user: UserModel){
+        fun bind(user: UserModel) {
             Glide.with(itemView.context).load(user.avatar)
                 .apply(RequestOptions().override(350, 350))
                 .into(binding.userAvatar)

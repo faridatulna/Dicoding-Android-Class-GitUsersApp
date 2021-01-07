@@ -7,8 +7,8 @@ import android.database.SQLException
 import android.database.sqlite.SQLiteDatabase
 import android.util.Log
 import androidx.constraintlayout.widget.Constraints
-import com.faridaaidah.gitusersapp.database.UserContract.UserColumns.Companion.TABLE_USER
 import com.faridaaidah.gitusersapp.database.UserContract.UserColumns.Companion.ID
+import com.faridaaidah.gitusersapp.database.UserContract.UserColumns.Companion.TABLE_USER
 
 class UserHelper(context: Context) {
     private var dataBaseHelper: DatabaseHelper = DatabaseHelper(context)
@@ -43,10 +43,11 @@ class UserHelper(context: Context) {
             null,
             null,
             null,
-            "$ID ASC")
+            "$ID ASC"
+        )
     }
 
-    fun queryById(id: String) : Cursor{
+    fun queryById(id: String): Cursor {
         return database.query(
             DATABASE_TABLE,
             null,
@@ -55,18 +56,19 @@ class UserHelper(context: Context) {
             null,
             null,
             null,
-            null)
+            null
+        )
     }
 
-    fun delete(id: String): Int{
+    fun delete(id: String): Int {
         return database.delete(DATABASE_TABLE, "$ID = '$id'", null)
     }
 
-    fun insert(contentValues: ContentValues?) : Long{
+    fun insert(contentValues: ContentValues?): Long {
         return database.insert(DATABASE_TABLE, null, contentValues)
     }
 
-    fun update(id: String, contentValues: ContentValues?) : Int{
+    fun update(id: String, contentValues: ContentValues?): Int {
         return database.update(DATABASE_TABLE, contentValues, "$ID = ?", arrayOf(id))
     }
 

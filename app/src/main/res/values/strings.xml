@@ -28,4 +28,5 @@
     <string name="del_user_success">Sukses menghapus user favorite</string>
     <string name="add_user_success">Sukses menambah user favorite</string>
     <string name="reminder">Pengingat</string>
+    <string name="btn_message">Klik untuk On atau Off</string>
 </resources>

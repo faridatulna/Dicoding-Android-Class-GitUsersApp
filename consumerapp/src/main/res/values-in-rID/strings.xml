@@ -25,7 +25,6 @@
     <string name="set_alarm_success">Sukses! Reminder terpasang!</string>
     <string name="set_alarm_cancel">Reminder dibatalkan!</string>
     <string name="alarm_message">Jangan lupa kunjungi Github App untuk kepoin pengguna Github!</string>
-    <string name="del_user_success">Sukses menghapus user favorite</string>
-    <string name="add_user_success">Sukses menambah user favorite</string>
     <string name="reminder">Pengingat</string>
+    <string name="btn_message">Klik untuk On atau Off</string>
 </resources>

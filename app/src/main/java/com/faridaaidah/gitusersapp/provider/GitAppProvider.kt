@@ -17,11 +17,12 @@ class GitAppProvider : ContentProvider() {
         private const val USER_ID = 2
         private val sUriMatcher = UriMatcher(UriMatcher.NO_MATCH)
         private lateinit var userHelper: UserHelper
+
         init {
             // content://com.dicoding.picodiploma.mynotesapp/note
             sUriMatcher.addURI(AUTHORITY, TABLE_USER, USER)
             // content://com.dicoding.picodiploma.mynotesapp/note/id
-            sUriMatcher.addURI(AUTHORITY, "$TABLE_USER/#",USER_ID)
+            sUriMatcher.addURI(AUTHORITY, "$TABLE_USER/#", USER_ID)
         }
     }
 
@@ -60,7 +61,7 @@ class GitAppProvider : ContentProvider() {
         selectionArgs: Array<String>?
     ): Int {
         val updated: Int = when (USER_ID) {
-            sUriMatcher.match(uri) -> userHelper.update(uri.lastPathSegment.toString(),values)
+            sUriMatcher.match(uri) -> userHelper.update(uri.lastPathSegment.toString(), values)
             else -> 0
         }
         context?.contentResolver?.notifyChange(CONTENT_URI, null)

@@ -118,7 +118,7 @@ class MainActivity : AppCompatActivity() {
                 startActivity(Intent(this, SettingsActivity::class.java))
                 return true
             }
-            else -> return true
         }
+        return true
     }
 }

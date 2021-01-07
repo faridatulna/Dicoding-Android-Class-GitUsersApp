@@ -8,7 +8,7 @@ object UserContract {
     const val SCHEME = "content"
 
     class UserColumns : BaseColumns {
-        companion object{
+        companion object {
             const val TABLE_USER = "user_table"
             const val ID = "id"
             const val USERNAME = "username"

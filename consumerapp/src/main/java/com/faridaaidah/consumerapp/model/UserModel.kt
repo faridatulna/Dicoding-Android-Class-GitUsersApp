@@ -16,7 +16,7 @@ class UserModel(
     @field:SerializedName("id")
     var id: Int? = null
 
-): Parcelable {
+) : Parcelable {
     @IgnoredOnParcel
     @SerializedName("items")
     private var items: List<UserModel>? = null

@@ -3,13 +3,14 @@ package com.faridaaidah.gitusersapp
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
-import android.view.*
+import android.view.Menu
+import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.preference.PreferenceFragmentCompat
 import androidx.preference.SwitchPreference
 import com.faridaaidah.gitusersapp.reminder.AlarmReceiver
 
-class SettingsActivity : AppCompatActivity(){
+class SettingsActivity : AppCompatActivity() {
     private lateinit var alarmReceiver: AlarmReceiver
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,7 +27,8 @@ class SettingsActivity : AppCompatActivity(){
         alarmReceiver = AlarmReceiver()
     }
 
-    class SettingsFragment : PreferenceFragmentCompat(), SharedPreferences.OnSharedPreferenceChangeListener {
+    class SettingsFragment : PreferenceFragmentCompat(),
+        SharedPreferences.OnSharedPreferenceChangeListener {
         private lateinit var alarmStatus: String
         private lateinit var alarmPreference: SwitchPreference
         private lateinit var alarmReceiver: AlarmReceiver
@@ -38,7 +40,7 @@ class SettingsActivity : AppCompatActivity(){
             alarmReceiver = AlarmReceiver()
         }
 
-        private fun init(){
+        private fun init() {
             alarmStatus = resources.getString(R.string.switch_preference)
             alarmPreference = findPreference<SwitchPreference>(alarmStatus) as SwitchPreference
         }
@@ -54,12 +56,18 @@ class SettingsActivity : AppCompatActivity(){
         }
 
         override fun onSharedPreferenceChanged(sharedPreferences: SharedPreferences, key: String) {
-            if(key == alarmStatus){
-                if (alarmPreference.isChecked){
+            if (key == alarmStatus) {
+                if (alarmPreference.isChecked) {
                     val repeatMessage = getString(R.string.alarm_message)
                     alarmPreference.isChecked = true
-                    context?.let { alarmReceiver.setRepeatingAlarm(it, AlarmReceiver.TYPE_REPEATING, repeatMessage) }
-                }else{
+                    context?.let {
+                        alarmReceiver.setRepeatingAlarm(
+                            it,
+                            AlarmReceiver.TYPE_REPEATING,
+                            repeatMessage
+                        )
+                    }
+                } else {
                     alarmPreference.isChecked = false
                     context?.let { alarmReceiver.cancelAlarm(it) }
                 }
@@ -82,7 +90,6 @@ class SettingsActivity : AppCompatActivity(){
         when (item.itemId) {
             R.id.nav_user -> {
                 startActivity(Intent(this, MainActivity::class.java))
-                finish()
                 return true
             }
             R.id.nav_set -> {

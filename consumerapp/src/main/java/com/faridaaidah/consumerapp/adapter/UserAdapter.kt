@@ -13,11 +13,13 @@ import com.faridaaidah.consumerapp.databinding.ItemRowUserBinding
 import com.faridaaidah.consumerapp.model.UserModel
 
 
-class UserAdapter(private val data: List<UserModel>) : RecyclerView.Adapter<UserAdapter.CardViewViewHolder>() {
+class UserAdapter(private val data: List<UserModel>) :
+    RecyclerView.Adapter<UserAdapter.CardViewViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CardViewViewHolder {
         //connecting to item layout
-        val view: View = LayoutInflater.from(parent.context).inflate(R.layout.item_row_user, parent, false)
+        val view: View =
+            LayoutInflater.from(parent.context).inflate(R.layout.item_row_user, parent, false)
         return CardViewViewHolder(view)
     }
 
@@ -31,7 +33,7 @@ class UserAdapter(private val data: List<UserModel>) : RecyclerView.Adapter<User
     inner class CardViewViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         //match the data with its component
         private val binding = ItemRowUserBinding.bind(itemView)
-        fun bind(user: UserModel){
+        fun bind(user: UserModel) {
             Glide.with(itemView.context).load(user.avatar)
                 .apply(RequestOptions().override(350, 350))
                 .into(binding.userAvatar)
