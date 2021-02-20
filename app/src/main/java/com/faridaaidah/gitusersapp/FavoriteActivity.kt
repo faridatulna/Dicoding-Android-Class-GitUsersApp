@@ -12,10 +12,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.faridaaidah.gitusersapp.adapter.FavoriteAdapter
 import com.faridaaidah.gitusersapp.database.UserContract.UserColumns.Companion.CONTENT_URI
-import com.faridaaidah.gitusersapp.database.UserHelper
 import com.faridaaidah.gitusersapp.databinding.ActivityFavoriteBinding
 import com.faridaaidah.gitusersapp.helper.MappingHelper
-import com.faridaaidah.gitusersapp.model.UserModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.async
@@ -24,12 +22,16 @@ import kotlinx.coroutines.launch
 class FavoriteActivity : AppCompatActivity() {
     private lateinit var favoriteAdapter: FavoriteAdapter
     private lateinit var binding: ActivityFavoriteBinding
-    private lateinit var userHelper: UserHelper
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityFavoriteBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        binding.rvUser.layoutManager = LinearLayoutManager(this)
+        binding.rvUser.setHasFixedSize(true)
+        favoriteAdapter = FavoriteAdapter()
+        binding.rvUser.adapter = favoriteAdapter
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
@@ -41,16 +43,12 @@ class FavoriteActivity : AppCompatActivity() {
                 loadData()
             }
         }
+
         contentResolver.registerContentObserver(CONTENT_URI, true, myObserver)
 
         if (savedInstanceState == null) {
             loadData()
         }
-
-        binding.rvUser.layoutManager = LinearLayoutManager(this)
-        binding.rvUser.setHasFixedSize(true)
-        favoriteAdapter = FavoriteAdapter()
-        binding.rvUser.adapter = favoriteAdapter
     }
 
     private fun loadData() {
@@ -61,19 +59,13 @@ class FavoriteActivity : AppCompatActivity() {
                 MappingHelper.mapCursorToList(cursor)
             }
             binding.progressBar.visibility = View.INVISIBLE
-            val users: ArrayList<UserModel>
-            users = deferredUsers.await()
+            val users = deferredUsers.await()
             if (users.isNotEmpty()) {
                 favoriteAdapter.listFavorite = users
             } else {
                 binding.signNoData.visibility = View.VISIBLE
             }
         }
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        userHelper.close()
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

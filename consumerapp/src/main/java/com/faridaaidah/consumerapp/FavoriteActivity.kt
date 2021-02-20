@@ -1,7 +1,10 @@
 package com.faridaaidah.consumerapp
 
 import android.content.Intent
+import android.database.ContentObserver
 import android.os.Bundle
+import android.os.Handler
+import android.os.HandlerThread
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
@@ -11,7 +14,6 @@ import com.faridaaidah.consumerapp.adapter.FavoriteAdapter
 import com.faridaaidah.consumerapp.database.UserContract.UserColumns.Companion.CONTENT_URI
 import com.faridaaidah.consumerapp.databinding.ActivityFavoriteBinding
 import com.faridaaidah.consumerapp.helper.MappingHelper
-import com.faridaaidah.consumerapp.model.UserModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.async
@@ -28,14 +30,25 @@ class FavoriteActivity : AppCompatActivity() {
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        binding.rvUser.layoutManager = LinearLayoutManager(this)
-        binding.rvUser.setHasFixedSize(true)
-        favoriteAdapter = FavoriteAdapter()
-        binding.rvUser.adapter = favoriteAdapter
+        val handlerThread = HandlerThread("DataObserver")
+        handlerThread.start()
+        val handler = Handler(handlerThread.looper)
+        val myObserver = object : ContentObserver(handler) {
+            override fun onChange(self: Boolean) {
+                loadData()
+            }
+        }
+
+        contentResolver.registerContentObserver(CONTENT_URI, true, myObserver)
 
         if (savedInstanceState == null) {
             loadData()
         }
+
+        binding.rvUser.layoutManager = LinearLayoutManager(this)
+        binding.rvUser.setHasFixedSize(true)
+        favoriteAdapter = FavoriteAdapter()
+        binding.rvUser.adapter = favoriteAdapter
     }
 
     private fun loadData() {
@@ -46,8 +59,7 @@ class FavoriteActivity : AppCompatActivity() {
                 MappingHelper.mapCursorToList(cursor)
             }
             binding.progressBar.visibility = View.INVISIBLE
-            val users: ArrayList<UserModel>
-            users = deferredUsers.await()
+            val users = deferredUsers.await()
             if (users.isNotEmpty()) {
                 favoriteAdapter.listFavorite = users
             } else {
