@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-        package="gitusersapp.app.com.gitusersapp">
+        package="com.faridaaidah.gitusersapp">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.VIBRATE" />
+
+    <permission
+            android:name="com.faridaaidah.gitusersapp.READ_DATABASE"
+            android:protectionLevel="normal" />
+    <permission
+            android:name="com.faridaaidah.gitusersapp.WRITE_DATABASE"
+            android:protectionLevel="normal" />
 
     <application
             android:allowBackup="true"
@@ -13,23 +20,43 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name=".SplashActivity" android:theme="@style/SplashTheme">
+        <provider
+                android:name=".provider.GitAppProvider"
+                android:authorities="com.faridaaidah.gitusersapp"
+                android:enabled="true"
+                android:exported="true"
+                android:readPermission="com.faridaaidah.gitusersapp.READ_DATABASE"
+                android:writePermission="com.faridaaidah.gitusersapp.WRITE_DATABASE" />
+
+        <activity
+                android:name=".SplashActivity"
+                android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" android:tint="#FFFFFF" android:logo="@drawable/github_logo"/>
+        <activity
+                android:name=".MainActivity"
+                android:logo="@drawable/github_logo"
+                android:tint="#FFFFFF" />
         <activity android:name=".DetailActivity" />
-        <activity android:name=".SettingsActivity" android:label="@string/title_activity_settings" />
-        <activity android:name=".FavoriteActivity" android:label="@string/title_activity_favorite"/>
+        <activity
+                android:name=".SettingsActivity"
+                android:label="@string/title_activity_settings" />
+        <activity
+                android:name=".FavoriteActivity"
+                android:label="@string/title_activity_favorite" />
+
         <meta-data
                 android:name="preloaded_fonts"
                 android:resource="@array/preloaded_fonts" />
+
         <receiver
                 android:name=".reminder.AlarmReceiver"
                 android:enabled="true"
-                android:exported="true"/>
+                android:exported="true" />
     </application>
 
 </manifest>

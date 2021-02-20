@@ -24,7 +24,7 @@
                 android:background="@drawable/circle_border">
 
             <de.hdodenhof.circleimageview.CircleImageView
-                    android:id="@+id/img_avatar"
+                    android:id="@+id/imgAvatar"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:layout_centerVertical="true"
@@ -130,7 +130,6 @@
             android:layout_alignParentBottom="true"
             android:foregroundGravity="left|bottom"
             android:soundEffectsEnabled="true"
-            android:visibility="visible"
             app:fabSize="normal"
             app:layout_anchorGravity="bottom|end"
             app:srcCompat="@drawable/ic_fav_border"
@@ -158,10 +157,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/rellay1"
-            android:visibility="visible"/>
+            android:visibility="visible" />
 
     <androidx.viewpager.widget.ViewPager
-            android:id="@+id/vp_follow"
+            android:id="@+id/vp_folls"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@id/tabs_folls"
@@ -169,7 +168,7 @@
             app:layout_constraintStart_toStartOf="parent" />
 
     <LinearLayout
-            android:id="@+id/sign_no_connect"
+            android:id="@+id/sign_noconnect"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center"
